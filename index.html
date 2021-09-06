@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Shopping Cart</title>
+     <!-- font awesome cdn link -->
+     <script src="https://kit.fontawesome.com/77aca5142f.js" crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+     <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+     <header>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+               <div class="container">
+                    <a class="navbar-brand" href="#">Super Brand</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                         aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                   <a class="nav-link active" aria-current="page" href="#">Home</a>
+                              </li>
+                         </ul>
+                         <form class="d-flex me-2">
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-outline-success" type="submit">Search</button>
+                         </form>
+                         <button class="btn bg-gradient position-relative" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                              <i style="font-size: 25px;" class="fas fa-shopping-cart text-white"></i>
+                              <span
+                                   class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                   <span id="total-cart-item">9+</span>
+                                   <span class="visually-hidden">Total cart item</span>
+                              </span>
+                         </button>
+
+
+                    </div>
+               </div>
+          </nav>
+     </header>
+     <main>
+          <section>
+               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                         <h5 id="offcanvasRightLabel">Cart items</h5>
+                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                              aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body ">
+                         <div class="row align-items-center mb-2">
+                              <div class="col-2">
+                                   <img class="w-100"
+                                        src="https://static-01.daraz.com.bd/p/mdc/88926bb91e0148914a509d25169ac1df.jpg"
+                                        alt="">
+                              </div>
+                              <div class="col-4"><small>Samsung Galaxy M02s</small></div>
+                              <div class="col-3">$<span>1000</span></div>
+                              <div class="col-3">
+                                   <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary btn-sm">-</button>
+                                        <button type="button" disabled class="btn btn-secondary btn-sm">0</button>
+                                        <button type="button" class="btn btn-secondary btn-sm">+</button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="offcanvas-footer d-flex align-items-center justify-content-between pb-2">
+                         <div>Total Price: $<span>2500</span></div>
+                         <button class="btn btn-info">Checkout Now</button>
+                    </div>
+               </div>
+          </section>
+          <section class="py-5">
+               <div class="container">
+                    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-4">
+                         <div class="col">
+                              <div class="card">
+                                   <img src="https://static-01.daraz.com.bd/p/mdc/88926bb91e0148914a509d25169ac1df.jpg"
+                                        class="card-img-top img-fluid" alt="...">
+                                   <div class="card-body">
+
+                                        <p class="card-text">Samsung Galaxy M02s</p>
+                                        <button class="btn btn-primary">Add to cart</button>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="col">
+                              <div class="card">
+                                   <img src="https://static-01.daraz.com.bd/p/mdc/88926bb91e0148914a509d25169ac1df.jpg"
+                                        class="card-img-top img-fluid" alt="...">
+                                   <div class="card-body">
+
+                                        <p class="card-text">Samsung Galaxy M02s</p>
+                                        <button class="btn btn-primary">Add to cart</button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </main>
+
+     <!-- Bootstrap javascript Link -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

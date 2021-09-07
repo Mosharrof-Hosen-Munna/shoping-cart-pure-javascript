@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
      <header>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                <div class="container">
@@ -58,7 +57,7 @@
                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                               aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body ">
+                    <div id="cart-container" class="offcanvas-body ">
                          <div class="row align-items-center mb-2">
                               <div class="col-2">
                                    <img class="w-100"
@@ -77,15 +76,15 @@
                          </div>
                     </div>
                     <div class="offcanvas-footer d-flex align-items-center justify-content-between pb-2">
-                         <div>Total Price: $<span>2500</span></div>
+                         <div>Total Price: $<span id="total-price">2500</span></div>
                          <button class="btn btn-info">Checkout Now</button>
                     </div>
                </div>
           </section>
           <section class="py-5">
                <div class="container">
-                    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-4">
-                         <div class="col">
+                    <div id="all-products" class="row row-cols-1 row-cols-lg-4 row-cols-md-4 g-3">
+                         <!-- <div class="col">
                               <div class="card">
                                    <img src="https://static-01.daraz.com.bd/p/mdc/88926bb91e0148914a509d25169ac1df.jpg"
                                         class="card-img-top img-fluid" alt="...">
@@ -106,7 +105,7 @@
                                         <button class="btn btn-primary">Add to cart</button>
                                    </div>
                               </div>
-                         </div>
+                         </div> -->
                     </div>
                </div>
           </section>
@@ -116,6 +115,8 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
           crossorigin="anonymous"></script>
+     <!-- Custom javascript  -->
+     <script src="./js/app.js"></script>
 </body>
 
 </html>

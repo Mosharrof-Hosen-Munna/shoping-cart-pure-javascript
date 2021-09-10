@@ -15,7 +15,7 @@
 
 <body>
      <header>
-          <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+          <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                <div class="container">
                     <a class="navbar-brand" href="#">Super Brand</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,10 +29,11 @@
                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                               </li>
                          </ul>
-                         <form class="d-flex me-2">
-                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                              <button class="btn btn-outline-success" type="submit">Search</button>
-                         </form>
+                         <div class="d-flex me-2">
+                              <input id="search-input" class="form-control me-2" type="search" placeholder="Search"
+                                   aria-label="Search">
+                              <button onclick="searchProducts()" class="btn btn-outline-success">Search</button>
+                         </div>
                          <button class="btn bg-gradient position-relative" data-bs-toggle="offcanvas"
                               data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                               <i style="font-size: 25px;" class="fas fa-shopping-cart text-white"></i>
@@ -68,7 +69,7 @@
                     </div>
                </div>
           </section>
-          <section class="py-5">
+          <section class="py-5 mt-4">
                <div class="container">
                     <div id="all-products" class="row row-cols-1 row-cols-lg-4 row-cols-md-4 g-3">
                          <!-- <div class="col">

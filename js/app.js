@@ -26,32 +26,33 @@ const products = [
 
   {
     id: 4611111346545,
-    name: "Samsung Galaxy M02s",
-    price: 10000,
+    name: "oppo f1",
+    price: 13500,
     img: "https://static-01.daraz.com.bd/p/mdc/1887e7da2a4a8b2bf9faec0469782c38.jpg",
   },
   {
     id: 641411166545,
-    name: "MI note 10",
-    price: 9000,
+    name: "Realme C21",
+    price: 19000,
     img: "https://static-01.daraz.com.bd/p/mdc/88926bb91e0148914a509d25169ac1df.jpg",
   },
   {
     id: 4697478346545,
-    name: "Infinix hot 10",
-    price: 18000,
+    name: "Infinix note 8i",
+    price: 12999,
     img: "https://static-01.daraz.com.bd/p/mdc/df018c4086e51ae78760cc4cd3b468b8.jpg",
   },
   {
     id: 46431364554315,
-    name: "Samsung Galaxy M02s",
-    price: 14000,
+    name: "Infinix hot 8",
+    price: 16500,
     img: "https://static-01.daraz.com.bd/p/767586c589d2f6f396344cf886fe0e7a.jpg",
   },
 ];
 
-const showAllProducts = () => {
+const showAllProducts = (products) => {
   const productsContainer = document.getElementById("all-products");
+  productsContainer.textContent = "";
   products.forEach((product) => {
     const singleProduct = generateProductHtml(product);
     productsContainer.appendChild(singleProduct);
@@ -81,6 +82,15 @@ function generateProductHtml(product) {
    `;
   return div;
 }
+// add search functionalities
+
+const searchProducts = () => {
+  const searchField = document.getElementById("search-input");
+  const searchProduct = products.filter((product) =>
+    product.name.toLowerCase().includes(searchField.value.toLowerCase())
+  );
+  showAllProducts(searchProduct);
+};
 
 const addToCartItem = (id) => {
   const localStorageItems = getCartItem();
@@ -129,7 +139,7 @@ const getCartItem = () => {
 };
 
 // display all products function here call
-showAllProducts();
+showAllProducts(products);
 
 // Update total product quantity
 
@@ -231,6 +241,7 @@ const deleteCartItems = () => {
     alertModal.appendChild(modalHTML(message));
   }
   displayProductInCart();
+  updateProductQuantity();
 };
 
 // handle modal alert
@@ -261,8 +272,8 @@ const modalHTML = (alertMessage) => {
                                 } d-flex align-items-center" role="alert">
                                   <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#${
                                     type === "success"
-                                      ? "info-fill"
-                                      : "check-circle-fill"
+                                      ? "check-circle-fill"
+                                      : "info-fill"
                                   }"/></svg>
                                   <div>
                                     ${
